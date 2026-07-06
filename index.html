@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forduló — Kávézó-reggeliző Vácon</title>
+  <meta name="description" content="A Forduló egy kávézó-reggeliző Vácon: friss reggeli, kézzel sült torta és pizza, pohár bor és hosszú beszélgetések — egy helyen, amit mi magunk építünk. Várunk egy fordulóra!" />
+  <meta property="og:title" content="Forduló — Kávézó-reggeliző Vácon" />
+  <meta property="og:description" content="Reggeli, kávé, torta, pizza, bor és programok egy helyen. Várunk egy fordulóra!" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23733030'/><text x='50' y='72' font-family='Georgia,serif' font-size='60' font-weight='600' fill='%23D3AD24' text-anchor='middle'>F</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Hanken+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================ HEADER ============================ -->
+  <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Friss reggeli minden reggel ✦ Kézzel épített hely ✦ Fahéjas tekercs mindig ✦ Várunk egy fordulóra ✦&#160;</span>
+        <span>Friss reggeli minden reggel ✦ Kézzel épített hely ✦ Fahéjas tekercs mindig ✦ Várunk egy fordulóra ✦&#160;</span>
+        <span>Friss reggeli minden reggel ✦ Kézzel épített hely ✦ Fahéjas tekercs mindig ✦ Várunk egy fordulóra ✦&#160;</span>
+        <span>Friss reggeli minden reggel ✦ Kézzel épített hely ✦ Fahéjas tekercs mindig ✦ Várunk egy fordulóra ✦&#160;</span>
+      </div>
+    </div>
+  <header class="site-header" id="siteHeader">
+    <div class="nav container">
+      <a class="brand" href="index.html">Forduló</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__menu" id="navMenu" aria-label="Főmenü">
+        <a href="index.html" class="nav__link is-active">Főoldal</a>
+        <a href="menu.html" class="nav__link">Menü</a>
+        <a href="asztalfoglalas.html" class="nav__link">Asztalfoglalás</a>
+        <a href="rendezvenyek.html" class="nav__link">Rendezvények</a>
+        <a href="esemenyek.html" class="nav__link">Események</a>
+        <a href="galeria.html" class="nav__link">Galéria</a>
+        <a href="kapcsolat.html" class="nav__link">Kapcsolat</a>
+        <a href="asztalfoglalas.html" class="btn btn--solid nav__cta">Foglalj asztalt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================ HERO ============================ -->
+    <section class="hero container">
+      <div class="hero__grid">
+        <div class="hero__copy reveal">
+          <p class="eyebrow">Vác • Kávézó-reggeliző</p>
+          <h1>Fordulj be<br />hozzánk egy <em>kávéra.</em></h1>
+          <p class="hero__sub">Reggeli, kézzel sült torta és pizza, egy pohár bor és hosszú beszélgetések — egy helyen, amit mi magunk építünk a nulláról.</p>
+          <div class="hero__actions btn-row">
+            <a href="asztalfoglalas.html" class="btn btn--solid btn--lg">Foglalj asztalt</a>
+            <a href="menu.html" class="btn btn--ghost btn--lg">Nézd a menüt</a>
+          </div>
+          <span class="hero__today">
+            <span class="dot"></span>
+            Ma nyitva: <strong id="todayTime">7:00–18:00</strong>
+          </span>
+        </div>
+
+        <div class="hero__art reveal" data-delay="1" aria-hidden="true">
+          <span class="hero__chip hero__chip--a">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h12v5a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9Z"/><path d="M16 10h2.5a2.5 2.5 0 0 1 0 5H16"/><path d="M7.5 5.5c0-1 .8-1.5.8-2.5M11.5 5.5c0-1 .8-1.5.8-2.5"/></svg>
+            specialty kávé
+          </span>
+          <span class="hero__chip hero__chip--b">fahéjas tekercs mindig</span>
+          <div class="hero__seal">
+            <!-- A FORDULÓ pecsét — a külső gyűrű lassan forog ("forduló") -->
+            <svg class="seal" viewBox="0 0 200 200" role="img" aria-label="Forduló kávézó-reggeliző, Vác, 2026">
+              <defs>
+                <!-- a körfelirat útja (r=72 → kerület ~452, ennyi a textLength) -->
+                <path id="sealCircle" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0" />
+              </defs>
+              <!-- a teljes pecsét lassan forog ("forduló") -->
+              <g class="seal__rotor">
+                <circle cx="100" cy="100" r="91" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.85"/>
+                <circle cx="100" cy="100" r="85" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.5"/>
+                <circle cx="100" cy="100" r="54" fill="none" stroke="currentColor" stroke-width="1.1" opacity="0.6"/>
+                <!-- a felirat textLength-csel pontosan körbeér, nincs rés és nincs átfedés -->
+                <text class="seal__ring-text" fill="currentColor">
+                  <textPath href="#sealCircle" startOffset="0" textLength="452" lengthAdjust="spacing">FORDULÓ&#160;·&#160;KÁVÉZÓ-REGGELIZŐ&#160;·&#160;VÁC&#160;·&#160;ALAPÍTVA 2026&#160;·</textPath>
+                </text>
+              </g>
+              <!-- középső kávéscsésze (nem forog) -->
+              <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" transform="translate(75,79) scale(2.1)">
+                <path d="M4 9h12v5a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9Z"/>
+                <path d="M16 10h2.4a2.4 2.4 0 0 1 0 4.8H16"/>
+                <path d="M7.5 5.6c0-1 .8-1.5.8-2.6M11.5 5.6c0-1 .8-1.5.8-2.6"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= MI A FORDULÓ ========================= -->
+    <section class="section section--paper">
+      <div class="container split">
+        <div class="reveal">
+          <p class="eyebrow">Mi a Forduló?</p>
+          <h2>Egy hely, ahová <span class="accent-italic">befordulsz</span> — és maradsz.</h2>
+          <p class="lead">Reggeltől estig nyitva: indul a nap egy jó kávéval és friss reggelivel, dél körül megérkezik a pizza és a sütemény, délután pedig jöhet egy pohár bor és egy hosszú beszélgetés.</p>
+          <p class="muted">Közben építünk egy helyet, ahová mi magunk is szívesen beülnénk — akár egy gyors kávéra, akár egy egész délutánra.</p>
+          <div class="btn-row" style="margin-top:1.6rem;">
+            <a href="tortenetunk.html" class="btn btn--ghost">A történetünk</a>
+          </div>
+        </div>
+        <div class="reveal" data-delay="1">
+          <div class="chips">
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Reggeli</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h12v5a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9Z"/><path d="M16 10h2.5a2.5 2.5 0 0 1 0 5H16"/></svg> Kávé</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M5 20v-7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v7"/><path d="M5 14c1.5 0 1.5 1.2 3 1.2S9.5 14 11 14s1.5 1.2 3 1.2 1.5-1.2 3-1.2"/></svg> Torta</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6.5 12 21l8.5-14.5a18 18 0 0 0-17 0Z"/><circle cx="10" cy="9.5" r="1"/><circle cx="13.5" cy="12" r="1"/></svg> Pizza</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-1 6a4 4 0 0 1-8 0L7 3Z"/><path d="M12 13v6M8 21h8"/></svg> Bor</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></svg> Programok</span>
+          </div>
+          <div class="callout" style="margin-top:1.6rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8l.01 0"/></svg>
+            <p>A kávézó még épül, a teljes menün és a fotókon dolgozunk — de a foglalás és az asztalod már most vár!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= MIT KÉSZÍTÜNK ========================= -->
+    <section class="section section--cream">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow eyebrow--center">Mit készítünk</p>
+          <h2>Reggeltől borozós délutánig</h2>
+          <p>Mi reggelit készítünk, kávét főzünk, tortát és pizzát sütünk, bort töltünk a poharakba és programokat szervezünk nektek.</p>
+        </div>
+        <div class="grid grid--4" style="margin-top:2.6rem;">
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h12v5a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9Z"/><path d="M16 10h2.5a2.5 2.5 0 0 1 0 5H16"/><path d="M7.5 5.5c0-1 .8-1.5.8-2.5M11.5 5.5c0-1 .8-1.5.8-2.5"/></svg></div>
+            <h3>Reggeli &amp; kávé</h3>
+            <p>Friss reggeli és gondosan főzött kávé minden reggel. És igen — fahéjas tekercs mindig akad.</p>
+          </article>
+          <article class="card reveal" data-delay="1">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M5 20v-7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v7"/><path d="M5 14c1.5 0 1.5 1.2 3 1.2S9.5 14 11 14s1.5 1.2 3 1.2 1.5-1.2 3-1.2"/><path d="M12 7v3"/></svg></div>
+            <h3>Torta &amp; édes</h3>
+            <p>Házi sütemények és torták a pulton — pont annyira, hogy nehéz legyen választani.</p>
+          </article>
+          <article class="card reveal" data-delay="2">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6.5 12 21l8.5-14.5a18 18 0 0 0-17 0Z"/><circle cx="10" cy="9.5" r="1"/><circle cx="13.5" cy="12" r="1"/></svg></div>
+            <h3>Pizza &amp; ebéd</h3>
+            <p>Dél körül beindul a sütő: ropogós pizzák és laktató fogások egy jó beszélgetés mellé.</p>
+          </article>
+          <article class="card reveal" data-delay="3">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-1 6a4 4 0 0 1-8 0L7 3Z"/><path d="M12 13v6M8 21h8"/></svg></div>
+            <h3>Bor &amp; programok</h3>
+            <p>Borozós délutánok, hosszú esték és programok — itt mindig történik valami.</p>
+          </article>
+        </div>
+        <div class="btn-row reveal" style="justify-content:center; margin-top:2.4rem;">
+          <a href="menu.html" class="btn btn--gold">Teljes menü &amp; itallap
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= NYITVATARTÁS ========================= -->
+    <section class="section section--paper">
+      <div class="container split">
+        <div class="reveal">
+          <p class="eyebrow">Nyitvatartás</p>
+          <h2>Mikor találsz itt minket?</h2>
+          <p class="muted">Korán nyitunk, hogy a reggeli kávé biztosan meglegyen, és estig itt vagyunk. A hétvége egy kicsit hosszabb.</p>
+          <div class="btn-row" style="margin-top:1.4rem;">
+            <a href="kapcsolat.html" class="btn btn--ghost">Hogyan találsz ide?</a>
+          </div>
+        </div>
+        <div class="reveal" data-delay="1">
+          <div class="hours">
+            <div class="hours__row" data-days="1,2,3,4">
+              <span class="hours__day">Hétfő – Csütörtök</span>
+              <span class="hours__time">7:00 – 18:00</span>
+            </div>
+            <div class="hours__row" data-days="5">
+              <span class="hours__day">Péntek</span>
+              <span class="hours__time">7:00 – 19:00</span>
+            </div>
+            <div class="hours__row" data-days="6">
+              <span class="hours__day">Szombat</span>
+              <span class="hours__time">7:00 – 19:00</span>
+            </div>
+            <div class="hours__row" data-days="0">
+              <span class="hours__day">Vasárnap</span>
+              <span class="hours__time">7:00 – 18:00</span>
+            </div>
+          </div>
+          <p class="hours__note">A nyitás körül a nyitvatartás még változhat — a friss időpontokat itt és a közösségi oldalainkon találod.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- transition -->
+    <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0,70 L0,30 C360,-6 1080,-6 1440,30 L1440,70 Z" fill="#4B4D0F"/></svg>
+
+    <!-- ========================= TÖRTÉNET TEASER ========================= -->
+    <section class="band section">
+      <div class="container" style="max-width:760px;">
+        <p class="eyebrow reveal">A történetünk</p>
+        <h2 class="reveal" data-delay="1">Négyen ültünk le egy asztalhoz — és lett belőle egy kávézó.</h2>
+        <p class="reveal lead" data-delay="1" style="margin-top:1.2rem;">Timi mindig is szeretett volna egy helyet, ahol van fahéjas tekercs. Lénárd imád másoknak főzni. Sára vendégeket és programokat álmodott ide. Richárd pedig egy helyet akart, amit a nulláról építhet fel.</p>
+        <p class="reveal" data-delay="2">Így állt össze a négyesünk — és így született meg a Forduló.</p>
+        <div class="btn-row reveal" data-delay="2" style="margin-top:1.8rem;">
+          <a href="tortenetunk.html" class="btn btn--light">Olvasd el a teljes történetet
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= A NÉGYESÜNK ========================= -->
+    <section class="section section--cream">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow eyebrow--center">A négyesünk</p>
+          <h2>Akik a pult mögött állnak</h2>
+        </div>
+        <div class="grid grid--4" style="margin-top:2.6rem;">
+          <div class="person reveal">
+            <!-- Cseréld valódi fotóra: <div class="person__photo"><img src="kepek/timi.jpg" alt="Timi"></div> -->
+            <div class="person__photo" style="background:linear-gradient(150deg,#BF7A87,#733030);">T</div>
+            <h3>Timi</h3>
+            <span>Alapító · a fahéjas tekercsek őre</span>
+            <p>Kislány kora óta tudta, hogy lesz egy kávézója. Most itt van.</p>
+          </div>
+          <div class="person reveal" data-delay="1">
+            <div class="person__photo" style="background:linear-gradient(150deg,#707316,#4B4D0F);">L</div>
+            <h3>Lénárd</h3>
+            <span>Alapító · konyha &amp; kétkezi munka</span>
+            <p>Imád másoknak főzni — és kiderült, meglepően sok bútort meg tud építeni.</p>
+          </div>
+          <div class="person reveal" data-delay="2">
+            <div class="person__photo" style="background:linear-gradient(150deg,#D3AD24,#707316);">S</div>
+            <h3>Sára</h3>
+            <span>Alapító · vendéglátás &amp; programok</span>
+            <p>Ő álmodja ide a programokat, a hosszú beszélgetéseket és a borozós délutánokat.</p>
+          </div>
+          <div class="person reveal" data-delay="3">
+            <div class="person__photo" style="background:linear-gradient(150deg,#A3DBE4,#562424);">R</div>
+            <h3>Richárd</h3>
+            <span>Alapító · a nulláról, az egész</span>
+            <p>Új irányt keresett — és egy helyet, amit a semmiből épít fel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= ESEMÉNYEK TEASER ========================= -->
+    <section class="section section--paper">
+      <div class="container split">
+        <div class="reveal">
+          <p class="eyebrow">Események</p>
+          <h2>Az első forduló: a <span class="accent-italic">megnyitó.</span></h2>
+          <p class="muted">Itt szervezzük majd a programjainkat — az első a megnyitónk lesz. Eseménynaptárunkban mindig megtalálod a következő alkalmakat.</p>
+          <div class="btn-row" style="margin-top:1.4rem;">
+            <a href="esemenyek.html" class="btn btn--ghost">Események &amp; naptár</a>
+            <a href="rendezvenyek.html" class="btn btn--ghost">Rendezvényt tartanál?</a>
+          </div>
+        </div>
+        <div class="reveal" data-delay="1">
+          <article class="card">
+            <div class="event">
+              <div class="event__date is-soon">
+                <span class="d">?</span>
+                <span class="m">Hamarosan</span>
+              </div>
+              <div class="event__body">
+                <h3>Megnyitó — Forduló</h3>
+                <p class="event__meta">Vác · részletek hamarosan</p>
+                <p>Az első közös fordulónk. A pontos időpontot itt és a közösségi oldalainkon jelentjük be — gyere el, és legyél ott az elsők között!</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= GYIK ========================= -->
+    <section class="section section--cream">
+      <div class="container" style="max-width:780px;">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow eyebrow--center">Gyakori kérdések</p>
+          <h2>Mielőtt befordulsz</h2>
+        </div>
+        <div class="reveal" style="margin-top:2rem;">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false"><span>Kell előre asztalt foglalni?</span><span class="ic"></span></button>
+            <div class="faq-a"><p>Egy gyors kávéhoz nem feltétlenül, de hétvégén és nagyobb társasággal jó előre szólni. Pár kattintás az <a href="asztalfoglalas.html">Asztalfoglalás</a> oldalon, és tartjuk az asztalt.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false"><span>Lehet nálatok rendezvényt tartani?</span><span class="ic"></span></button>
+            <div class="faq-a"><p>Igen! Szülinap, céges összejövetel, borozós délután — írd meg a részleteket a <a href="rendezvenyek.html">Rendezvények</a> oldalon, és egyedi ajánlattal keresünk.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false"><span>Mit kapok reggelire?</span><span class="ic"></span></button>
+            <div class="faq-a"><p>A reggeli a szívünk csücske, ezért bőséges a kínálat — a részletes menün még dolgozunk, de a friss kávé és a fahéjas tekercs garantált. A teljes választékot a <a href="menu.html">Menü</a> oldalon frissítjük.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false"><span>Hol vagytok pontosan?</span><span class="ic"></span></button>
+            <div class="faq-a"><p>Vácon találsz minket. A pontos címet és a térképet a <a href="kapcsolat.html">Kapcsolat</a> oldalon nézheted meg.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- transition -->
+    <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0,70 L0,30 C360,-6 1080,-6 1440,30 L1440,70 Z" fill="#733030"/></svg>
+
+    <!-- ========================= CTA BAND ========================= -->
+    <section class="band band--wine section">
+      <div class="container section-head--center" style="text-align:center; max-width:680px;">
+        <h2 class="reveal">Várunk titeket is egy fordulóra.</h2>
+        <p class="reveal lead" data-delay="1" style="margin-top:1rem;">Akár egy gyors kávéra, akár egy egész délutánra — foglalj asztalt, és gyere be hozzánk.</p>
+        <div class="btn-row reveal" data-delay="2" style="justify-content:center; margin-top:1.8rem;">
+          <a href="asztalfoglalas.html" class="btn btn--gold btn--lg">Foglalj asztalt</a>
+          <a href="menu.html" class="btn btn--light btn--lg">Nézd a menüt</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand brand--light" href="index.html">Forduló</a>
+        <p class="footer__tag">Kávézó-reggeliző Vácon. Reggeli, kávé, torta, pizza, bor és hosszú beszélgetések — egy helyen, amit mi magunk építünk.</p>
+        <!-- TODO: cseréld a # helyére a valódi közösségi linkeket -->
+        <div class="socials">
+          <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h2.5V6H14c-2 0-3.2 1.3-3.2 3.3V11H8.5v3h2.3v7H14v-7h2.3l.4-3H14V9.6c0-.4.2-.6.6-.6Z"/></svg></a>
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2 1.6 3.5 3.5 3.8v3c-1.4 0-2.7-.4-3.8-1.1v5.6a5.7 5.7 0 1 1-5.7-5.7c.3 0 .6 0 .9.1v3.1a2.6 2.6 0 1 0 1.8 2.5V3H16Z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Oldalak</h4>
+        <ul>
+          <li><a href="tortenetunk.html">Történetünk</a></li>
+          <li><a href="menu.html">Menü &amp; itallap</a></li>
+          <li><a href="asztalfoglalas.html">Asztalfoglalás</a></li>
+          <li><a href="rendezvenyek.html">Rendezvények</a></li>
+          <li><a href="esemenyek.html">Események</a></li>
+          <li><a href="galeria.html">Galéria</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Kapcsolat</h4>
+        <ul>
+          <!-- TODO: valódi cím / telefon / e-mail -->
+          <li>Vác, Horgásztói utca 4.</li>
+          <li><a href="tel:+36200000000">+36 20 000 0000</a></li>
+          <li><a href="mailto:hello@fordulo.hu">hello@fordulo.hu</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Nyitvatartás</h4>
+        <ul>
+          <li>H–Cs: 7:00–18:00</li>
+          <li>Péntek: 7:00–19:00</li>
+          <li>Szombat: 7:00–19:00</li>
+          <li>Vasárnap: 7:00–18:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> Forduló — Minden jog fenntartva.</span>
+      <span>Az oldalt az <a href="https://aimpress.hu/" target="_blank" rel="noopener">AImpress</a> működteti.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

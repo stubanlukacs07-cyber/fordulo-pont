@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galéria — Forduló Kávézó-reggeliző Vác</title>
+  <meta name="description" content="Pillanatképek a Forduló kávézóból Vácon. A hely még épül — a fotók hamarosan érkeznek, ahogy elkészül a tér, az ételek és az első alkalmak." />
+  <meta property="og:title" content="Galéria — Forduló" />
+  <meta property="og:description" content="Pillanatképek a Forduló kávézóból Vácon — a fotók hamarosan érkeznek." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23733030'/><text x='50' y='72' font-family='Georgia,serif' font-size='60' font-weight='600' fill='%23D3AD24' text-anchor='middle'>F</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Hanken+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================ HEADER ============================ -->
+  <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Friss reggeli minden reggel ✦ Kézzel épített hely ✦ Fahéjas tekercs mindig ✦ Várunk egy fordulóra ✦&#160;</span>
+        <span>Friss reggeli minden reggel ✦ Kézzel épített hely ✦ Fahéjas tekercs mindig ✦ Várunk egy fordulóra ✦&#160;</span>
+        <span>Friss reggeli minden reggel ✦ Kézzel épített hely ✦ Fahéjas tekercs mindig ✦ Várunk egy fordulóra ✦&#160;</span>
+        <span>Friss reggeli minden reggel ✦ Kézzel épített hely ✦ Fahéjas tekercs mindig ✦ Várunk egy fordulóra ✦&#160;</span>
+      </div>
+    </div>
+  <header class="site-header" id="siteHeader">
+    <div class="nav container">
+      <a class="brand" href="index.html">Forduló</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__menu" id="navMenu" aria-label="Főmenü">
+        <a href="index.html" class="nav__link">Főoldal</a>
+        <a href="menu.html" class="nav__link">Menü</a>
+        <a href="asztalfoglalas.html" class="nav__link">Asztalfoglalás</a>
+        <a href="rendezvenyek.html" class="nav__link">Rendezvények</a>
+        <a href="esemenyek.html" class="nav__link">Események</a>
+        <a href="galeria.html" class="nav__link is-active">Galéria</a>
+        <a href="kapcsolat.html" class="nav__link">Kapcsolat</a>
+        <a href="asztalfoglalas.html" class="btn btn--solid nav__cta">Foglalj asztalt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================ PAGE HERO ============================ -->
+    <section class="page-hero container">
+      <p class="eyebrow eyebrow--center reveal">Galéria</p>
+      <h1 class="reveal" data-delay="1">Ahogy épül a hely.</h1>
+      <p class="reveal" data-delay="2">A kávézó még készül — a fotók pedig vele együtt érkeznek. Hamarosan itt mutatjuk meg a teret, a kézzel épített bútorokat, a reggeliket és az első közös fordulókat.</p>
+    </section>
+
+    <!-- ========================= GALÉRIA RÁCS ========================= -->
+    <section class="section section--paper">
+      <div class="container">
+        <div class="callout reveal" style="max-width:760px; margin:0 auto 2.2rem;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5A1.5 1.5 0 0 1 4.5 6H7l1.2-1.8A1.5 1.5 0 0 1 9.5 3.5h5a1.5 1.5 0 0 1 1.3.7L17 6h2.5A1.5 1.5 0 0 1 21 7.5v11A1.5 1.5 0 0 1 19.5 20h-15A1.5 1.5 0 0 1 3 18.5Z"/><circle cx="12" cy="13" r="3.5"/></svg>
+          <p><strong>A fotók még készülnek.</strong> A galéria utolsó simításként telik meg — amint elkészül a tér és megnyitunk, ide kerülnek az első igazi képek. Addig is így képzeld el a hangulatot.</p>
+        </div>
+
+        <!--
+          VALÓDI KÉP HOZZÁADÁSA: tedd a <div class="tile ...">-be a képet, így:
+            <div class="tile is-wide"><img src="kepek/terem.jpg" alt="A Forduló terme" /></div>
+          A lightbox automatikusan működni fog (lásd a lap alján a #lightbox elemet).
+          A "tile__soon" badge-et és a placeholder feliratot ilyenkor vedd ki.
+        -->
+        <div class="gallery reveal">
+          <div class="tile is-wide" style="background:linear-gradient(150deg,#733030,#562424);">
+            <span class="tile__soon">Hamarosan</span>
+            <span class="tile__label">A terem</span>
+          </div>
+          <div class="tile" style="background:linear-gradient(150deg,#BF7A87,#733030);">
+            <span class="tile__soon">Hamarosan</span>
+            <span class="tile__label">Fahéjas tekercs</span>
+          </div>
+          <div class="tile" style="background:linear-gradient(150deg,#D3AD24,#707316);">
+            <span class="tile__soon">Hamarosan</span>
+            <span class="tile__label">Reggeli</span>
+          </div>
+          <div class="tile" style="background:linear-gradient(150deg,#707316,#4B4D0F);">
+            <span class="tile__soon">Hamarosan</span>
+            <span class="tile__label">Kézzel épített bútorok</span>
+          </div>
+          <div class="tile" style="background:linear-gradient(150deg,#A3DBE4,#562424);">
+            <span class="tile__soon">Hamarosan</span>
+            <span class="tile__label">Kávé</span>
+          </div>
+          <div class="tile" style="background:linear-gradient(150deg,#562424,#733030);">
+            <span class="tile__soon">Hamarosan</span>
+            <span class="tile__label">Pizza</span>
+          </div>
+          <div class="tile is-wide" style="background:linear-gradient(150deg,#4B4D0F,#707316);">
+            <span class="tile__soon">Hamarosan</span>
+            <span class="tile__label">Borozós délutánok</span>
+          </div>
+          <div class="tile" style="background:linear-gradient(150deg,#BF7A87,#D3AD24);">
+            <span class="tile__soon">Hamarosan</span>
+            <span class="tile__label">Az első forduló</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- transition -->
+    <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0,70 L0,30 C360,-6 1080,-6 1440,30 L1440,70 Z" fill="#733030"/></svg>
+
+    <!-- ========================= CTA BAND ========================= -->
+    <section class="band band--wine section">
+      <div class="container section-head--center" style="text-align:center; max-width:680px;">
+        <h2 class="reveal">Nézd meg élőben.</h2>
+        <p class="reveal lead" data-delay="1" style="margin-top:1rem;">A legjobb kép úgyis az, amit te csinálsz nálunk. Foglalj asztalt, és gyere be egy fordulóra.</p>
+        <div class="btn-row reveal" data-delay="2" style="justify-content:center; margin-top:1.8rem;">
+          <a href="asztalfoglalas.html" class="btn btn--gold btn--lg">Foglalj asztalt</a>
+          <a href="esemenyek.html" class="btn btn--light btn--lg">Események</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand brand--light" href="index.html">Forduló</a>
+        <p class="footer__tag">Kávézó-reggeliző Vácon. Reggeli, kávé, torta, pizza, bor és hosszú beszélgetések — egy helyen, amit mi magunk építünk.</p>
+        <!-- TODO: cseréld a # helyére a valódi közösségi linkeket -->
+        <div class="socials">
+          <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h2.5V6H14c-2 0-3.2 1.3-3.2 3.3V11H8.5v3h2.3v7H14v-7h2.3l.4-3H14V9.6c0-.4.2-.6.6-.6Z"/></svg></a>
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2 1.6 3.5 3.5 3.8v3c-1.4 0-2.7-.4-3.8-1.1v5.6a5.7 5.7 0 1 1-5.7-5.7c.3 0 .6 0 .9.1v3.1a2.6 2.6 0 1 0 1.8 2.5V3H16Z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Oldalak</h4>
+        <ul>
+          <li><a href="tortenetunk.html">Történetünk</a></li>
+          <li><a href="menu.html">Menü &amp; itallap</a></li>
+          <li><a href="asztalfoglalas.html">Asztalfoglalás</a></li>
+          <li><a href="rendezvenyek.html">Rendezvények</a></li>
+          <li><a href="esemenyek.html">Események</a></li>
+          <li><a href="galeria.html">Galéria</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Kapcsolat</h4>
+        <ul>
+          <!-- TODO: valódi cím / telefon / e-mail -->
+          <li>Vác, Horgásztói utca 4.</li>
+          <li><a href="tel:+36200000000">+36 20 000 0000</a></li>
+          <li><a href="mailto:hello@fordulo.hu">hello@fordulo.hu</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Nyitvatartás</h4>
+        <ul>
+          <li>H–Cs: 7:00–18:00</li>
+          <li>Péntek: 7:00–19:00</li>
+          <li>Szombat: 7:00–19:00</li>
+          <li>Vasárnap: 7:00–18:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> Forduló — Minden jog fenntartva.</span>
+      <span>Az oldalt az <a href="https://aimpress.hu/" target="_blank" rel="noopener">AImpress</a> működteti.</span>
+    </div>
+  </footer>
+
+  <!-- lightbox: a galéria valódi képeinél automatikusan aktiválódik -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <img src="" alt="" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
