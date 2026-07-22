@@ -516,3 +516,6 @@ p { margin: 0 0 1rem; }
   .cal__cell { font-size: 0.88rem; }
   .cal { padding: 0.7rem 0.7rem 0.9rem; }
 }
+
+/* ==================================================== Rólunk: történet + csapat (egy szekció) */
+.team-title { text-align: center; font-family: var(--font-display); font-weight: 600; font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.1rem); color: var(--wine-deep); margin-top: clamp(2.4rem, 5vw, 3.4rem); }
